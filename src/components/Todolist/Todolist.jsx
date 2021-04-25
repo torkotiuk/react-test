@@ -1,15 +1,28 @@
 import React from 'react';
 import styles from './Todolist.module.scss';
+import classnames from 'classnames';
 
-const Todolist = ({ todos, onDeleteTodo }) => {
+const Todolist = ({ todos, onDeleteTodo, onToggleCompleted }) => {
   const completedTodos = todos.filter(todo => todo.completed);
-  console.log(completedTodos.length);
+
+  const { TodoList__item, TodoList__item_completed } = styles;
 
   return (
     <>
       <ul>
-        {todos.map(({ id, text }) => (
-          <li key={id} className={styles.TodoList__item}>
+        {todos.map(({ id, text, completed }) => (
+          // <li key={id} className={styles.TodoList__item}>
+          <li
+            key={id}
+            className={classnames(TodoList__item, {
+              [TodoList__item_completed]: completed,
+            })}
+          >
+            <input
+              type="checkbox"
+              checked={completed}
+              onChange={() => onToggleCompleted(id)}
+            />
             <p className={styles.TodoList__text}>{text}</p>
             <button onClick={() => onDeleteTodo(id)}>Delete</button>
           </li>

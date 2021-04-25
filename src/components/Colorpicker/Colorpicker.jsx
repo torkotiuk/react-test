@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './ColorpickerStyles.css';
+import classnames from 'classnames';
 
 // class
 class Colorpicker extends Component {
@@ -12,17 +13,25 @@ class Colorpicker extends Component {
   };
 
   makeOptionClassName = index => {
-    const optionClasses = ['sets'];
+    // v.2 - using package 'classnames'
+    // - where 'sets', ... - default classes
+    // - in {} - set dinamically class, f.e. 'active', this class will be added
+    //   if next expression (f.e. index === this.state.activeOptionIdx) will be true
+    return classnames('sets', {
+      active: index === this.state.activeOptionIdx,
+    });
 
-    if (index === this.state.activeOptionIdx) {
-      optionClasses.push('active');
-    }
-
-    return optionClasses.join(' ');
+    // v1. push additional class
+    // const optionClasses = ['sets'];
+    // if (index === this.state.activeOptionIdx) {
+    //   optionClasses.push('active');
+    // }
+    // return optionClasses.join(' ');
   };
 
   render() {
     const { label } = this.props.options[this.state.activeOptionIdx];
+    // console.log('>>>', this.props);
 
     return (
       <div>
@@ -32,6 +41,10 @@ class Colorpicker extends Component {
           {this.props.options.map(({ label, color }, index) => (
             <button
               className={this.makeOptionClassName(index)}
+              //next will work without fn makeOptionClassName
+              // className={classnames('sets', {
+              //   active: index === this.state.activeOptionIdx,
+              // })}
               style={{ backgroundColor: color }}
               key={label}
               onClick={() => this.setActiveIndex(index)}

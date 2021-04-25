@@ -11,6 +11,10 @@
   padding: 5px;
 }
 
+.TodoList__item_completed {
+  background-color: rgb(112, 252, 187);
+}
+
 .TodoList__text {
   margin-right: 10px;
 }
