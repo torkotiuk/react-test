@@ -12,6 +12,7 @@ import Filter from '../Filter';
 import Form from '../Form';
 import TodosG from '../pages/TodosG';
 import Phonebook from '../Phonebook/App';
+import Feedback from '../Feedback';
 
 import React, { Component } from 'react';
 import shortid from 'shortid';
@@ -110,6 +111,7 @@ class Content extends Component {
         {pathname === '/form' && <Form onSubmit={this.formSubmitHandler} />}
         {pathname === '/todosG' && <TodosG />}
         {pathname === '/phonebook' && <Phonebook />}
+        {pathname === '/feedback' && <Feedback />}
       </div>
     );
   }

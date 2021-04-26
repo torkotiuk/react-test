@@ -17,6 +17,7 @@ const Menu = () => {
       <a href="/form">Form (get data)</a>
       <a href="/todosG">Todos Gerry</a>
       <a href="/phonebook">Phonebook</a>
+      <a href="/feedback">Feedback</a>
       <a href="/contacts">Contacts</a>
     </div>
   );

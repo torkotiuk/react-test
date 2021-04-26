@@ -24,4 +24,8 @@
 
 #    import 'modern-normalize/modern-normalize.css'; --- IN INDEX.JS
 
+# 7. npm install @material-ui/core  -------- i -------
+
+# 8. npm i shortid -------- i -------
+
 # ADDITIONAL: window + dot --- emotions in vscode
