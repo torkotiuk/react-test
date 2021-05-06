@@ -24,8 +24,10 @@
 
 #    import 'modern-normalize/modern-normalize.css'; --- IN INDEX.JS
 
-# 7. npm install @material-ui/core  -------- i -------
+# 7. npm install react-router-dom  -------- i -------
 
-# 8. npm i shortid -------- i -------
+# --- 90. npm install @material-ui/core  -------- i -------
+
+# --- 91. npm i shortid -------- i -------
 
 # ADDITIONAL: window + dot --- emotions in vscode

@@ -18,6 +18,7 @@ const Menu = () => {
       <a href="/todosG">Todos Gerry</a>
       <a href="/phonebook">Phonebook</a>
       <a href="/feedback">Feedback</a>
+      <a href="/clockcomp">Clockcomp</a>
       <a href="/contacts">Contacts</a>
     </div>
   );

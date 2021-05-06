@@ -13,6 +13,7 @@ import Form from '../Form';
 import TodosG from '../pages/TodosG';
 import Phonebook from '../Phonebook/App';
 import Feedback from '../Feedback';
+import ClockComp from '../ClockComp';
 
 import React, { Component } from 'react';
 import shortid from 'shortid';
@@ -112,6 +113,7 @@ class Content extends Component {
         {pathname === '/todosG' && <TodosG />}
         {pathname === '/phonebook' && <Phonebook />}
         {pathname === '/feedback' && <Feedback />}
+        {pathname === '/clockcomp' && <ClockComp />}
       </div>
     );
   }
