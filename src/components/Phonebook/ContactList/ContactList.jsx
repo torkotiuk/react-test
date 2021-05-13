@@ -1,14 +1,14 @@
 import styles from './ContactList.module.scss';
 
 const ContactList = ({ items, onDeleteContact }) => {
-  const statMen = items.reduce(
-    (acc, item) => (item.gender === 'male' ? acc + 1 : acc),
-    0,
-  );
-  const statWomen = items.reduce(
-    (acc, item) => (item.gender === 'female' ? acc + 1 : acc),
-    0,
-  );
+  // const statMen = items.reduce(
+  //   (acc, item) => (item.gender === 'male' ? acc + 1 : acc),
+  //   0,
+  // );
+  // const statWomen = items.reduce(
+  //   (acc, item) => (item.gender === 'female' ? acc + 1 : acc),
+  //   0,
+  // );
 
   return (
     <div>

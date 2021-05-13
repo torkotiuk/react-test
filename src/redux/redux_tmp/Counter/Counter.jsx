@@ -2,15 +2,11 @@ import { connect } from 'react-redux';
 import Controls from './Controls';
 import * as actions from '../../redux/actions';
 
-const Counter = ({ valueCCC, step, onIncrement, onDecrement }) => {
+const Counter = ({ valueCCC, onIncrement, onDecrement }) => {
   return (
     <div>
       <span>{valueCCC}</span>
-      <Controls
-        oneStep={step}
-        onIncr={() => onIncrement(step)}
-        onDecr={() => onDecrement(step)}
-      />
+      <Controls onIncr={onIncrement} onDecr={onDecrement} />
     </div>
   );
 };
@@ -19,8 +15,8 @@ const Counter = ({ valueCCC, step, onIncrement, onDecrement }) => {
 // 2. a) getting actions, firtsly import actions
 const mapDispatchToProps = dispatch => {
   return {
-    onIncrement: val => dispatch(actions.increment(val)),
-    onDecrement: val => dispatch(actions.increment(val)),
+    onIncrement: () => dispatch(actions.increment(5)),
+    onDecrement: () => dispatch(actions.increment(5)),
   };
 };
 // --- === --- // --- === --- // --- === --- // --- === ---
@@ -29,8 +25,7 @@ const mapDispatchToProps = dispatch => {
 // 1. a) mapStateToProps -> getting state of all application
 const mapStateToProps = state => {
   return {
-    valueCCC: state.counter.value,
-    step: state.counter.step,
+    valueCCC: state.counterValue,
   };
 };
 

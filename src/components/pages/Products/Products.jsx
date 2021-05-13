@@ -26,7 +26,7 @@ import ProductList from '../../ProductList';
 // ];
 
 const Products = () => {
-  const [value, setValue] = useState([
+  const [value] = useState([
     {
       id: 1,
       name: 'Phone',
